@@ -7,12 +7,12 @@ TOKEN = "6257486153:AAHtdNEakiHk5-M7Nwk7f1Oad9sCJ-K-DjI"
 bot = telebot.TeleBot(TOKEN)
 
 # Обрабатываются все документы и аудиозаписи
-@bot.message_handler(content_types=['audio'])
+@bot.message_handler(content_types=['voice'])
 def handle_audios(message):
-    bot.send_message(message.chat.id, f"Ваш документ получен, {message.chat.username}!")
+    bot.send_message(message.chat.id, f"К сожалению, я не умею слушать и говорить, пишите мне пожалуйста, {message.chat.username}!")
 #def say_lmao(message: telebot.types.Message):
-#def handle_audio(message: telebot.types.Message):
-    #bot.reply_to(message, 'К сожалению, я не умею слушать и говорить, пишите мне, пожалуйста')
+#def handle_voice(message: telebot.types.Message):
+    #bot.reply_to(message, 'К сожалению, я не умею слушать и говорить, пишите мне пожалуйста, ')
 
     # pass
 @bot.message_handler(content_types=['document'])
